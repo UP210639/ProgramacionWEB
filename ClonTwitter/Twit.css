@@ -1,0 +1,223 @@
+/* Colores */
+:root {
+    --primary-color-grey: #6e7886;
+    --primary-color-grey-50: rgba(110, 120, 134, 0.1);
+    
+    --Color-icon-comentario: rgb(29, 161, 242);
+    --Color-icon-comentario-50: rgba(29, 161, 242, 0.4);
+
+    --Color-icon-retwit: rgb(24, 176, 95);
+    --Color-icon-retwit-50: rgba(24, 176, 95, 0.4);
+    
+    --Color-icon-like: rgb(224, 36, 94);
+    --Color-icon-like-50: rgba(224, 36, 96, 0.4);
+
+    --Color-icon-compartir: rgb(30, 148, 221);
+    --Color-icon-compartir-50: rgba(30, 148, 221, 0.4);
+
+
+}
+
+/* principales */
+* {
+    background:#15202b;
+    color: #ffffff;
+
+    box-sizing: border-box; 
+
+    padding: 0;
+    margin: 0;
+}
+
+#link {
+    color: rgb(29, 161, 242);
+    text-decoration: none;
+}
+
+.greytext {
+    color: #515b69;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.comentext{
+    color: #515b69;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+img,
+svg {
+    max-width: 100%;
+    max-height: auto;
+}
+
+body {
+    display: flex;
+    
+    width: 100vw;
+    height: 100vh;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido */
+
+.ContenidoT{
+    border: white;
+    width: 650px;
+}
+
+.ContenidoT * {
+    background-color: transparent;
+}
+
+.ContenidoT:hover {
+    cursor: pointer;
+    background-color: var(--primary-color-grey-50);
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+
+.ContenidoB{
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    display: grid;
+    grid-template-columns:50px 1fr;
+    grid-template-rows: 1fr;
+}
+
+.ContenidoB p {
+    padding: 10px 0px;
+}
+
+.ContenidoI{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+/* Informacion */
+
+.Tcontenido Img {
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--primary-color-grey);
+    width: 95%;
+}
+
+/* Avatar */
+
+.Avatar > img{
+    width: 75%;
+    border-radius: 50%;
+    margin: 10px;
+
+}
+
+
+/* ICONOS */
+
+.icon {
+    width: 60px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.icon svg,
+.icon span{
+    color: var(--primary-color-gray);
+    fill: var(--primary-color-gray);
+}
+
+.icon svg {
+    border-radius: 50%;
+    width: 80%;
+    padding: 5px;
+    margin-right: 2.5px;
+}
+
+.icon span{
+    font-size: small;
+}
+
+/* Comentarios */
+.ContenidoI .icon:nth-child(1):hover svg,
+.ContenidoI .icon:nth-child(1):hover span {
+    transition-duration: 300ms;  
+
+} 
+
+.ContenidoI .icon:nth-child(1):hover svg {
+    background-color: var(--Color-icon-comentario-50);
+    fill: var(--Color-icon-comentario);
+}
+
+.ContenidoI .icon:nth-child(1):hover span{
+   color:var(--Color-icon-comentario-50);
+}
+
+/* Retwit */
+
+.ContenidoI .icon:nth-child(2):hover svg,
+.ContenidoI .icon:nth-child(2):hover span {
+    transition-duration: 300ms;  
+
+} 
+
+.ContenidoI .icon:nth-child(2):hover svg {
+    background-color: var(--Color-icon-retwit-50);
+    fill: var(--Color-icon-retwit);
+}
+
+.ContenidoI .icon:nth-child(2):hover span{
+    color: var(--Color-icon-retwit-50);
+}
+
+/* Like */
+
+.ContenidoI .icon:nth-child(3):hover svg,
+.ContenidoI .icon:nth-child(3):hover span {
+    transition-duration: 300ms;  
+
+} 
+
+.ContenidoI .icon:nth-child(3):hover svg {
+    background-color: var(--Color-icon-like-50);
+    fill: var(--Color-icon-like);
+}
+
+.ContenidoI .icon:nth-child(3):hover span{
+    color: var(--Color-icon-like-50);
+}
+
+
+/* Compartir */
+
+.ContenidoI .icon:nth-child(4):hover svg,
+.ContenidoI .icon:nth-child(4):hover span {
+    transition-duration: 300ms;  
+
+} 
+
+.ContenidoI .icon:nth-child(4):hover svg {
+    background-color: var(--Color-icon-compartir-50);
+    fill: var(--Color-icon-compartir);
+}
+
+.ContenidoI .icon:nth-child(4):hover span{
+    color: var(--Color-icon-compartir-50);
+ }
+/* 
+.comentario{
+    grid-column: 3/2;
+} */
+
