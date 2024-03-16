@@ -1,0 +1,64 @@
+[
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "Lavar los baños",
+      "completed": false
+    },
+    {
+      "userId": 3,
+      "id": 2,
+      "title": "Lavar los platos",
+      "completed": false
+    },
+    {
+      "userId": 4,
+      "id": 3,
+      "title": "Hacer Tarea",
+      "completed": false
+    },
+    {
+      "userId": 4,
+      "id": 4,
+      "title": "Preparar la comida",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "id": 5,
+      "title": "Lavar la ropa",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 6,
+      "title": "Ver el ultimo capitulo de the last of us :D",
+      "completed": false
+    },
+    {
+      "userId": 2,
+      "id": 7,
+      "title": "Ya no se que poner",
+      "completed": false
+    },
+    {
+      "userId": 2,
+      "id": 8,
+      "title": "Dia sin que hacer",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "id": 9,
+      "title": "Molestar a alguien de la lista ",
+      "completed": false
+    },
+    {
+      "userId": 3,
+      "id": 10,
+      "title": "Terminar el codigo :D",
+      "completed": true
+    }
+  ]
+
+  

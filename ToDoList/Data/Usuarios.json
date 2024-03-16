@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "firstname": "Eliseo",
+      "lastname": "Diaz Delgadillo",
+      "email": "Eliseo.DiazD@gmail.com"
+    },
+    {
+      "id": 2,
+      "firstname": "Nelly Esther",
+      "lastname": "Espinoza Huerta",
+      "email": "Nelly.EspinozaH@gmail.com"
+    },
+    {
+      "id": 3,
+      "firstname": "Jorge Antonio",
+      "lastname": "Ruiz Esparza Galvan",
+      "email": "Jorge.RuizEsparzaG@gmail.com"
+    },
+    {
+      "id": 4,
+      "firstname": "Jose Alberto",
+      "lastname": "Flores Martinez",
+      "email": "JoseA.FloresM@gmail.com"
+    },
+    {
+      "id": 5,
+      "firstname": "Osiris Olimpia",
+      "lastname": "Martinez",
+      "email": "OsirisO.Martinez@gmail.com"
+    }
+  ]
