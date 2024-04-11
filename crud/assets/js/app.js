@@ -1,4 +1,4 @@
-import { deleteTask, createTask, getAllUsers,getTaskUsingUserID, getTask, updateTask } from "./requests.js";
+import { deleteTask, createTask, getAllUsers, getTasks, getTask, updateTask } from "./petitions.js";
 const listUsers = document.getElementById('users');
 const taskTable = document.getElementById('tasks');
 const taskForm = document.getElementById('form-task');
@@ -9,7 +9,7 @@ let pressedButtonId;
 
 document.addEventListener('DOMContentLoaded',async ()=>{
     const allUsers = await getAllUsers();
-    // console.log(allUsers);
+
 
     let template=listUsers.innerHTML;
     for (const user of allUsers) {
@@ -55,12 +55,12 @@ listUsers.addEventListener('change',async ()=>{
   submitButton.innerText= "SAVE";
   formTitle.innerText = "Insert Task";
   submitButton.setAttribute("id","insert");
-  taskForm.children[0].children[0].value =`` //TITULO
+  taskForm.children[0].children[0].value =`` 
 
 });
 
+// Actualizar
 
-// AGREGAR TASK O UPDATE TASK
 taskForm.addEventListener('submit', async (e)=>{
   e.preventDefault();
   const formData = new FormData(taskForm);
@@ -69,7 +69,7 @@ taskForm.addEventListener('submit', async (e)=>{
 
   console.log(formData);
 
-  //PARA INSERCION-----------------------------------------------------------------------------------------------------------------
+ 
   if (submitButton.id == 'insert'){
     console.log("TAREA INSERTADA");
     try {
@@ -78,7 +78,6 @@ taskForm.addEventListener('submit', async (e)=>{
         console.log("JSON ID",response.taskId)
         const taskInfo = await getTask(response.taskId)
         console.log("INFO",formData)
-        // Update the DOM with the new task
         const newRow = document.createElement('tr');
         newRow.setAttribute("id",`tablerow${taskInfo.id}`)
         let taskCompleted = "No completada"
@@ -102,7 +101,7 @@ taskForm.addEventListener('submit', async (e)=>{
         taskTable.children[1].appendChild(newRow);
   
       addUpdateButtonEvents();
-      taskForm.children[0].children[0].value =`` //TITULO
+      taskForm.children[0].children[0].value =`` 
       } else {
         console.error('Failed to create task');
       }
@@ -110,12 +109,8 @@ taskForm.addEventListener('submit', async (e)=>{
       console.error('Error in INSERTING:', error);
     };
   };
-  //FIN INSERCION------------------------------------------------------------------------------------------------------------------
 
-
-
-  //PARA UPDATE----------------------------------------------------------------------------------------------------------------
-  if (submitButton.id == 'update'){
+ if (submitButton.id == 'update'){
     console.log("TAREA ACTUALIZADA");
     try {
       const response = await updateTask(formData,pressedButtonId)
@@ -140,11 +135,11 @@ taskForm.addEventListener('submit', async (e)=>{
             </button>
           </td>
         `;
-        //RESET BUTTON
+
         formTitle.innerText = "Insert Task";
         submitButton.innerText= "SAVE";
         submitButton.setAttribute("id","insert");
-        taskForm.children[0].children[0].value =`` //TITULO
+        taskForm.children[0].children[0].value =`` 
 
       } else {
         console.error("Response unsuccessful, failed to update task")
@@ -153,8 +148,7 @@ taskForm.addEventListener('submit', async (e)=>{
       console.error('Error in UPDATING:', error);
     }
   };
-  //FIN UPDATE------------------------------------------------------------------------------------------------------------------
-  
+
   addDeleteButtonEvents();  
   addUpdateButtonEvents();
 });
@@ -170,9 +164,9 @@ function addUpdateButtonEvents() {
       pressedButtonId = taskId;
       taskInfo.completed === true ? taskCheck='true' : taskCheck='';
       console.log(taskInfo);
-      taskForm.children[0].children[0].value =`${taskInfo.title}` //NOMBRE DE TAREA
-      formTitle.innerText = "Modify Task";//TITULO FORMULARIO
-      taskForm.children[2].children[0].checked = taskCheck //COMPLETO
+      taskForm.children[0].children[0].value =`${taskInfo.title}` 
+      formTitle.innerText = "Modify Task";
+      taskForm.children[2].children[0].checked = taskCheck 
       submitButton.innerText= "UPDATE";
       submitButton.setAttribute("id","update");
       window.scrollTo({ top: 0, behavior:'smooth'});

@@ -6,7 +6,7 @@ export async function getAllUsers() {
   return json;
  };
 
-export async function getTaskUsingUserID(idUser) {
+export async function getTasks(idUser) {
   const res = await fetch(`/api/getTasks.php?id=${idUser}`);
   const json = await res.json();
   return json;
